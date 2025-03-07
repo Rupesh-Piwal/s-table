@@ -6,25 +6,23 @@ import { useInView } from "react-intersection-observer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-// Define the props interface for the Section component
 interface SectionProps {
   title: string;
   description: string;
   imageSrc: string;
   buttonText: string;
-  reverse?: boolean; // Add a reverse prop to control the layout
-  highlightedText?: string; // Optional text to highlight
-  badgeText?: string; // Optional badge text
+  reverse?: boolean;
+  highlightedText?: string;
+  badgeText?: string;
 }
 
-// Reusable Section Component
 const Section: React.FC<SectionProps> = ({
   title,
   description,
   imageSrc,
   buttonText,
-  reverse = false, // Default to false (text on left, image on right)
-  highlightedText = "Available anytime, anywhere", // Default badge text
+  reverse = false,
+  highlightedText = "Available anytime, anywhere",
   badgeText,
 }) => {
   const [ref, inView] = useInView({
@@ -66,7 +64,6 @@ const Section: React.FC<SectionProps> = ({
     },
   };
 
-  // Extract last sentence for highlighting (or use provided highlight)
   const getHighlightedText = () => {
     const sentences = description.split(". ");
     const lastSentence = sentences[sentences.length - 1];
@@ -82,7 +79,6 @@ const Section: React.FC<SectionProps> = ({
         reverse ? "bg-gray-50/50" : ""
       }`}
     >
-      {/* Text Content */}
       <motion.div
         initial="hidden"
         animate={textControls}
@@ -137,7 +133,6 @@ const Section: React.FC<SectionProps> = ({
         </motion.div>
       </motion.div>
 
-      {/* Image */}
       <motion.div
         initial="hidden"
         animate={imageControls}
@@ -146,7 +141,6 @@ const Section: React.FC<SectionProps> = ({
           reverse ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        {/* Background effect elements */}
         <motion.div
           className="absolute -inset-4 bg-gradient-to-tr from-[#7B7B7B]/15 to-transparent rounded-2xl blur-sm -z-10"
           animate={{
@@ -184,7 +178,6 @@ const Section: React.FC<SectionProps> = ({
             <p className="text-sm font-medium">{highlightedText}</p>
           </div>
 
-          {/* Optional floating badge */}
           {badgeText && (
             <motion.div
               className="absolute top-4 right-4 bg-white py-1 px-3 rounded-full shadow-md text-xs font-semibold text-black"
@@ -197,7 +190,6 @@ const Section: React.FC<SectionProps> = ({
           )}
         </motion.div>
 
-        {/* Decorative element */}
         <motion.div
           className={`absolute ${
             reverse ? "right-[-20px]" : "left-[-20px]"
@@ -216,11 +208,9 @@ const Section: React.FC<SectionProps> = ({
   );
 };
 
-// Main Component with Multiple Sections
 const Sections: React.FC = () => {
   return (
     <div className="space-y-8">
-      {/* Section 1 - Text on Left, Image on Right */}
       <Section
         title="Unlimited Practice Sessions"
         description="For topics and subjects you go through in your school and coaching every day, we create instant practice sessions specially made for your daily needs. Our innovative AI algorithm crafts batches of 20 questions, each accompanied by instant feedback and solutions. It's like having a home tutor, available 24×7."
@@ -229,18 +219,16 @@ const Sections: React.FC = () => {
         badgeText="AI-Powered"
       />
 
-      {/* Section 2 - Image on Left, Text on Right */}
       <Section
         title="Personalized Assessment"
         description="We measure your learning differently. Not just comparing you among your classmates and peers rather, how much you have learnt and how much have your skills in each subject have grown. We create tests based on your learning session and exam requirements to understand and modify study plans for you. The tests are uniquely created for each student to improve and advance their respective knowledge."
         imageSrc="/section-2.png"
         buttonText="Explore Learning Paths"
-        reverse={true} // Add the reverse prop to flip the layout
+        reverse={true}
         highlightedText="Personalized for your growth"
         badgeText="Adaptive Learning"
       />
 
-      {/* Section 3 - Text on Left, Image on Right */}
       <Section
         title="Managing Students Academic Life"
         description="There is more to study than just practicing and giving tests. To meet the requirements of exams, we need to carefully do revision, repeatedly align our study plan and understand each student's learning curve. This all needs to be done along with school tests and other scholarship exams. We manage it all for you so that you focus on learning and worry no more."

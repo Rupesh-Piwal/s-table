@@ -39,10 +39,7 @@ const Hero = () => {
           }}
         />
       </div>
-
-      {/* Content container */}
       <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
-        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -52,8 +49,6 @@ const Hero = () => {
           <Sparkles size={16} className="text-black" />
           <span className="text-sm font-medium">AI-Powered Learning</span>
         </motion.div>
-
-        {/* Main text content */}
         <motion.div
           className="text-center lg:text-left z-10 w-full"
           initial={{ opacity: 0, y: 30 }}
@@ -136,13 +131,12 @@ const Hero = () => {
               ease: "easeOut",
             }}
           >
-            Your personal AI-Tutor for all academic needs. Whether it's school
-            exams, boards, or competitive exams, we plan, manage, and help you
-            clear your doubts instantly. For students of class 10th, 11th, and
-            12th (CBSE) and preparing for all medical or engineering entrance
-            exams.
+            Your personal AI-Tutor for all academic needs. Whether it&apos;s
+            school exams, boards, or competitive exams, we plan, manage, and
+            help you clear your doubts instantly. For students of class 10th,
+            11th, and 12th (CBSE) and preparing for all medical or engineering
+            entrance exams.
           </motion.p>
-
           <motion.div
             className="flex flex-col sm:flex-row items-center sm:items-start justify-center lg:justify-start gap-4 mt-6"
             initial={{ opacity: 0, y: 20 }}
@@ -206,8 +200,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Hero image */}
       <motion.div
         className="mt-8 lg:mt-0 z-10 w-full lg:w-1/2 flex justify-center lg:justify-end"
         initial={{ opacity: 0, x: 40 }}
