@@ -9,7 +9,6 @@ import HeroBanner from "../../public/herobanner.png";
 const Hero = () => {
   return (
     <div className="relative overflow-hidden flex flex-col lg:flex-row items-center justify-between sm:px-6 py-8 sm:py-12">
-      {/* Background blobs */}
       <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] -z-10">
         <motion.div
           className="w-full h-full rounded-full bg-[#707070] opacity-30 blur-[80px]"
@@ -71,7 +70,7 @@ const Hero = () => {
               }}
             >
               Optimize
-            </motion.span>{" "}
+            </motion.span>
             <motion.span
               className="text-[#707070]"
               initial={{ opacity: 0, y: 20 }}

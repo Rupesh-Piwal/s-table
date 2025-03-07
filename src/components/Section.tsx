@@ -75,7 +75,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <div
       ref={ref}
-      className={`flex flex-col lg:flex-row items-center justify-between py-20 px-4 md:px-8 gap-16 max-w-7xl mx-auto ${
+      className={`flex flex-col lg:flex-row items-center justify-between py-20 gap-16  ${
         reverse ? "bg-gray-50/50" : ""
       }`}
     >
@@ -137,7 +137,7 @@ const Section: React.FC<SectionProps> = ({
         initial="hidden"
         animate={imageControls}
         variants={imageVariants}
-        className={`w-full max-w-[540px] relative ${
+        className={`w-full max-w-[580px] relative ${
           reverse ? "lg:order-1" : "lg:order-2"
         }`}
       >
