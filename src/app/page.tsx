@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import MidSection from "@/components/mid-section";
 import Navbar from "@/components/Navbar";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Section />
       <MidSection />
+   
     </div>
   );
 }
