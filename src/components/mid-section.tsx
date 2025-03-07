@@ -16,8 +16,8 @@ const MidSection = () => {
           students. We found that the best students need more attention to excel
           further, while those struggling need more attention to improve their
           abilities. Every student deserves personal attention. Based on the
-          principle of "Personal Attention," we built our algorithm and AI tutor
-          to cater to each child uniquely…
+          principle of &quot;Personal Attention,&quot; we built our algorithm
+          and AI tutor to cater to each child uniquely…
         </p>
         <div className="mt-4">
           <Link
@@ -32,9 +32,9 @@ const MidSection = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col gap-3 items-center justify-center my-[30px] lg:h-[400px] ">
+      <div className="flex flex-col gap-3 items-center justify-center my-[30px] lg:h-[400px]">
         <h2 className="text-[18px] lg:text-[38px] font-bold text-center">
-          Carfted for your all academic needs
+          Crafted for all your academic needs
         </h2>
         <motion.div
           className="mt-8 inline-block"
@@ -46,7 +46,7 @@ const MidSection = () => {
             href="#"
             className="group bg-black text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center gap-2"
           >
-            Get you Entry
+            Get Your Entry
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{
@@ -55,7 +55,7 @@ const MidSection = () => {
                 repeatDelay: 2,
                 ease: "easeInOut",
               }}
-              className=" transition-opacity duration-300"
+              className="transition-opacity duration-300"
             >
               <ArrowRight size={18} />
             </motion.span>
