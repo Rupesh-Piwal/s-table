@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import MidSection from "@/components/mid-section";
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 
@@ -7,7 +8,8 @@ export default function Home() {
     <div className="bg-[#FFFFFF] max-w-[80%] m-auto">
       <Navbar />
       <Hero />
-      <Section/>
+      <Section />
+      <MidSection />
     </div>
   );
 }
